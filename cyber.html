@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberLearn - Cybersecurity Learning Platform</title>
+    <link rel="stylesheet" href="cyber-styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">🛡️ CyberLearn</h1>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+
+            <div class="search-box-sidebar">
+                <input 
+                    type="text" 
+                    id="sidebarSearch" 
+                    class="sidebar-search" 
+                    placeholder="Search topics..."
+                >
+            </div>
+
+            <nav class="nav-tree" id="navTree">
+                <!-- Navigation will be injected here -->
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="progress-widget">
+                    <div class="progress-label">Your Progress</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text" id="progressText">0%</div>
+                </div>
+                <button class="reset-btn" id="resetBtn">Reset Progress</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="breadcrumb" id="breadcrumb"></div>
+                <div class="top-bar-actions">
+                    <button class="theme-toggle" id="themeToggle">🌙</button>
+                    <button class="info-btn" id="infoBtn">ℹ️</button>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area" id="contentArea">
+                <div class="welcome-screen">
+                    <h1>Welcome to CyberLearn</h1>
+                    <p>Master cybersecurity from basics to advanced topics</p>
+                    <div class="welcome-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="totalTopics">0</span>
+                            <span class="stat-label">Topics</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="totalQuizzes">0</span>
+                            <span class="stat-label">Quizzes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="topicsCompleted">0</span>
+                            <span class="stat-label">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="content-nav">
+                <button class="nav-btn prev-btn" id="prevBtn" disabled>← Previous</button>
+                <button class="nav-btn next-btn" id="nextBtn" disabled>Next →</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div class="modal" id="quizModal">
+        <div class="modal-content quiz-container">
+            <div class="modal-header">
+                <h2 id="quizTitle">Quiz</h2>
+                <button class="close-btn" id="closeQuiz">&times;</button>
+            </div>
+
+            <div class="quiz-content" id="quizContent">
+                <!-- Quiz questions injected here -->
+            </div>
+
+            <div class="quiz-actions">
+                <button class="btn-secondary" id="submitQuiz">Submit Quiz</button>
+                <div class="quiz-result" id="quizResult" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>About CyberLearn</h2>
+                <button class="close-btn" id="closeInfo">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>CyberLearn</strong> is a comprehensive cybersecurity learning platform designed for beginners to advanced users.</p>
+                <h3>Features:</h3>
+                <ul>
+                    <li>📚 Comprehensive curriculum covering all cybersecurity domains</li>
+                    <li>❓ Interactive quizzes and challenges</li>
+                    <li>💾 Progress tracking</li>
+                    <li>🔄 Regularly updated content</li>
+                    <li>🌙 Dark mode support</li>
+                </ul>
+                <p><strong>Version:</strong> 1.0.0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="cyber-data.js"></script>
+    <script src="cyber-script.js"></script>
+</body>
+</html>
